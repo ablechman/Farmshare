@@ -17,8 +17,11 @@
       <li><%= link_to "Home", root_path %></li>
       <li><%= link_to "Buy", buy_path %></li> 
       <li><%= link_to "Sell", buy_path %></li> <!-- change path once page is set up to "sell path-->
-      <li><%= link_to "Login", buy_path %></li> <!-- change path once page is set up to "sell path-->
-      <li><%= link_to "Sign Up", buy_path %></li> <!-- change path once page is set up to "sell path-->
+       <% if user_signed_in? %>
+          <li><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
+      <% else %>
+          <li><%= link_to "Sign Up", new_user_session_path %></li>
+      <% end %>   
     </ul>
   </div><!-- /.navbar-collapse -->  
 </div> <!-- /.container -->

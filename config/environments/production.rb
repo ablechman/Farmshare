@@ -77,4 +77,10 @@ Farmshare::Application.configure do
 
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
+
+ # Required for Heorku
+  # Note to set this to your actual host name
+     config.action_mailer.default_url_options = { :host => 'http://shrouded-plateau-9492.herokuapp.com/' }
+
+
 end
