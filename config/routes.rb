@@ -1,10 +1,12 @@
 Farmshare::Application.routes.draw do
-  devise_for :admins
+  resources :pins
+
   devise_for :users
   root "pages#home"
   get "buy" => "pages#buy"
   get "sell" => "pages#sell"
   get "admin" =>  "pages#admin"
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
