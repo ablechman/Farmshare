@@ -2,7 +2,7 @@ Farmshare::Application.routes.draw do
   resources :pins
 
   devise_for :users
-  root "pages#home"
+  root "pins#index"
   get "buy" => "pages#buy"
   get "sell" => "pages#sell"
   get "admin" =>  "pages#admin"

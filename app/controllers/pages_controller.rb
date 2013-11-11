@@ -2,7 +2,9 @@ class PagesController < ApplicationController
   def home
   end
 
-  def Buy 
+  def about
   end
 
+
 end
+
